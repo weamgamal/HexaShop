@@ -1,0 +1,50 @@
+﻿@model List<ApplicationUser>
+@{
+    ViewData["Title"] = "showCustomers";
+}
+
+<h1>showCustomers</h1>
+<div class="main-banner" id="top" style="padding-top:100px">
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="padding:15px">
+        @foreach (var item in Model)
+        {
+            <div class="col" style="padding:15px">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.UserName</h5>
+                        @*Address*@
+                        <span> @item.Address</span>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+@section scripts{
+    <!-- jQuery -->
+    <script src="/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="/js/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="/js/owl-carousel.js"></script>
+    <script src="/js/accordions.js"></script>
+    <script src="/js/datepicker.js"></script>
+    <script src="/js/scrollreveal.min.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/imgfix.min.js"></script>
+    <script src="/js/slick.js"></script>
+    <script src="/js/lightbox.js"></script>
+    <script src="/js/isotope.js"></script>
+
+    <!-- Global Init -->
+    <script src="/js/custom.js"></script>
+
+ }
+

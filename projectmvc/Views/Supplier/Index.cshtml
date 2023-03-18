@@ -1,0 +1,33 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = ViewBag.Title;
+    Layout = "_NavAndFooter";
+
+}
+
+
+
+<div class="main-banner" id="top" style="padding:70px">
+
+    <a class="btn btn-primary my-5 mx-5" href="/Supplier/AddProduct">
+        Add Product
+    </a>
+
+
+    @foreach (var item in Model)
+    {
+
+        <div class="card my-2" style="width: 30rem;">
+            <div class="card-body">
+                <h5 class="card-title">@item.Name</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@item.Price</h6>
+                <p class="card-text">@item.Description</p>
+
+            </div>
+        </div>
+
+    }
+</div>
+
+
+

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@if (User.IsInRole("Shipper"))
+{
+    <div> for Shipper Role</div>
+
+    <a href="/Role/New" class="btn btn-Primary" style="background:blue"> AddRole</a>
+    <a href="/Shipper/signOut"class="btn btn-Primary" style="background:blue"> signOut</a>
+}
+else if (User.Identity.IsAuthenticated)
+{
+    <div> for Authorized Role</div>
+}
+else
+{
+    <div> for Annonymus </div>
+
+    <a href="/Shipper/Registration" value="Register" class="btn btn-Primary" style="background:blue">Register</a>
+
+    <a href="/Shipper/Login" value="Login" class="btn btn-Primary" style="background:blue"> Login</a>
+
+    <a href="/Shipper/signOut"class="btn btn-Primary" style="background:blue"> signOut</a>
+    
+
+}
+
